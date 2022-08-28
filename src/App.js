@@ -1,11 +1,20 @@
-//import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Product from './components/Product';
+import Header from './components/Header';
 function App() {
   return (
     <div className="App">
-      
-    </div>
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path='/' exact element={<Home/>} />
+          <Route path='/products' element={<Product/>} />
+        </Routes>
+      </Router>
+  </div>
   );
 }
 
