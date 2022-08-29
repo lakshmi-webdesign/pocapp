@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import {Outlet, Link } from 'react-router-dom';
-import { SidebarData } from './SideBar';
+import { SidebarData } from './Sidebar';
 import './Header.css';
 import { IconContext } from 'react-icons';
-import { Navbar} from 'react-bootstrap'
+import { Nav,Button,Navbar,Form,FormControl,NavDropdown} from 'react-bootstrap'
 
+import "react-bootstrap/dist/react-bootstrap.min.js";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Header() {
   const [sidebar, setSidebar] = useState(false);
@@ -15,18 +17,43 @@ function Header() {
 
   return (
     <>
-    <Navbar expand="md" className="scrolled" style={{backgroundColor:'lawngreen'}}>
+    <Navbar expand="md" className="scrolled shadow p-2 mb-3 bg-white rounded" style={{backgroundColor:'lawngreen'}}>
+    <Navbar.Brand href="/" style={{marginLeft: '20px',marginRight: '30px'}}>
+       <img alt="Logo" />
+    </Navbar.Brand>
+    
+    <div class="d-flex search" style={{width: '-webkit-fill-available'}}>
+    <Form className="d-flex " style={{width: '95.666667%',margin: 'auto'}}>  
+    <button class="input-group-text" id="basic-addon1">⌕</button>
+    <FormControl type="search" placeholder="Search for Products" className="mr-sm-2" aria-label="Search"></FormControl>  
+    </Form>
+    </div>
+
+    <Nav className="account ms-auto" id="account">
+          <NavDropdown title='Account' id='basic-nav-dropdown' style={{color: 'black'}}>
+            <NavDropdown.Item >My Account</NavDropdown.Item>
+            <NavDropdown.Item >My Orders</NavDropdown.Item>
+            <NavDropdown.Item >Saved Address</NavDropdown.Item>
+            <NavDropdown.Item >My Wallet</NavDropdown.Item>
+            <NavDropdown.Item >FAQ's</NavDropdown.Item>
+            <NavDropdown.Item >Log Out</NavDropdown.Item>
+          </NavDropdown>
+          
+          <Button variant="cart outline-success" style={{backgroundColor:'green',color:'white'}}>MyCart</Button>
+    </Nav>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <div className='navbar'>
-          <Link to='#' className='menu-bars'>
-            <FaIcons.FaBars onClick={showSidebar} />
+        <div className='navbar' style={{marginLeft: '30px'}}>
+          <Link to='#' className='menu-bars' >
+            <FaIcons.FaUser onClick={showSidebar} style={{color:'black'}}/>
           </Link>
         </div>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className='nav-menu-items' onClick={showSidebar}>
+      </IconContext.Provider>
+
+        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'} style={{overflowX: 'hidden'}}>
+          <ul className='nav-menu-items' onClick={showSidebar} style={{paddingLeft:'0rem'}}>
             <li className='navbar-toggle'>
               <Link to='#' className='menu-bars'>
-                <AiIcons.AiOutlineClose />
+                <AiIcons.AiOutlineClose style={{color:'white'}}/>
               </Link>
             </li>
             {SidebarData.map((item, index) => {
@@ -42,7 +69,7 @@ function Header() {
             })}
           </ul>
         </nav>
-      </IconContext.Provider>
+     
       </Navbar>
     </>
   )
