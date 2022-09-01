@@ -1,27 +1,37 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './component/Home';
-import Product from './component/Product';
-import Header from './component/Header';
-import Blog from './component/Blog'
-import Footer from './component/Footer';
+//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+//import Home from './component/Home';
+//import Adresses from './component/Addresses';
+//import Account from './component/Account';
+//import Orders from './component/Orders';
+//import Header from './component/Header';
+//import Footer from './component/Footer';
+//import Login from './component/Login';
 
 import "react-bootstrap/dist/react-bootstrap.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Register from './component/Register';
 
 function App() {
+
+
   return (
     <div className="App">
-      <Router>
+      <Register/>
+      {/*<Login/>
+       <Router>
         <Header/>
         <Routes>
           <Route path='/' exact element={<Home/>} />
-          <Route path='/products' element={<Product/>} />
-          <Route path='/blog' element={<Blog/>} />
+          <Route path='/addresses' element={<Adresses/>} />
+          <Route path='/account' element={<Account/>} />
+          <Route path='/orders' element={<Orders/>} />
+          {/* <Route path='/login' element={<Login/>} />  
         </Routes>
       </Router>
-      <Footer/>
+      <Footer/> */}
+      
   </div>
   );
 }
