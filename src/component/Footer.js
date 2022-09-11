@@ -3,7 +3,7 @@ function Footer() {
 
 
   return (
-    <div className='main-footer' style={{ backgroundColor: 'black', color: 'white' }}>
+    <div className='main-footer' style={{ backgroundColor: 'rgb(26, 37, 83)', color: 'white',left:"0",bottom:"0",right:"0" }}>
       <div className='container-fluid pt-5 pb-5'>
         <div className='row d-flex '>
 

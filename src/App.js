@@ -1,37 +1,41 @@
 import React from 'react';
 import './App.css';
-//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-//import Home from './component/Home';
-//import Adresses from './component/Addresses';
-//import Account from './component/Account';
-//import Orders from './component/Orders';
-//import Header from './component/Header';
-//import Footer from './component/Footer';
-//import Login from './component/Login';
+import { BrowserRouter as Router, Routes, Route , Navigate } from 'react-router-dom';
+import Home from './component/Home';
 
+import Header from './component/Header';
+import Footer from './component/Footer';
+import Login from './component/Login';
+import Register from './component/Register';
+import BalanceEnquiry from './component/BalanceEnquiry';
 import "react-bootstrap/dist/react-bootstrap.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Register from './component/Register';
+import Registration1 from './component/Registration1';
+import Dashboard from './component/Dashboard';
+
 
 function App() {
 
 
   return (
     <div className="App">
-      <Register/>
-      {/*<Login/>
-       <Router>
+      
+      <Router>
         <Header/>
         <Routes>
           <Route path='/' exact element={<Home/>} />
-          <Route path='/addresses' element={<Adresses/>} />
-          <Route path='/account' element={<Account/>} />
-          <Route path='/orders' element={<Orders/>} />
-          {/* <Route path='/login' element={<Login/>} />  
-        </Routes>
-      </Router>
-      <Footer/> */}
+        <Route path='/balanceenquiry' element={<BalanceEnquiry/>}/>
+         <Route path='/login' element={<Login/>} />  
+         <Route path='/register' element={<Register/>} />  
+         <Route path='/registration1' exact element={<Registration1/>}/>
+          <Route path='/dashboard' element={<Dashboard />}/>
+          <Route path='/redirect' element={ <Navigate to="/error-page" />}/>
+         </Routes>
+         </Router>    
+        
+      <Footer style={{left: '0',bottom: '0',right: '0'}}/> 
       
+     
   </div>
   );
 }
