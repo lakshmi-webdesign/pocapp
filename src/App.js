@@ -12,6 +12,7 @@ import "react-bootstrap/dist/react-bootstrap.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Registration1 from './component/Registration1';
 import Dashboard from './component/Dashboard';
+import FundTransfer from './component/FundTransfer';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
          <Route path='/register' element={<Register/>} />  
          <Route path='/registration1' exact element={<Registration1/>}/>
           <Route path='/dashboard' element={<Dashboard />}/>
+          <Route path="/fundtransfer" element={<FundTransfer/>}/>
           <Route path='/redirect' element={ <Navigate to="/error-page" />}/>
          </Routes>
          </Router>    

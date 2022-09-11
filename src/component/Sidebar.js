@@ -24,7 +24,7 @@ export const SidebarData = [
   },
   {
     title: 'Fund Transfer',
-    path: '/account',
+    path: '/fundtransfer',
     icon: <BiIcons.BiTransfer />,
     cName: 'nav-text'
   },
