@@ -1,7 +1,11 @@
 import React from 'react';
-import * as FaIcons from 'react-icons/fa';
+//import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
+//import * as IoIcons from 'react-icons/io';
+import * as IoIcons5 from 'react-icons/io5';
+import * as MdIcons from 'react-icons/md';
+import * as BiIcons  from 'react-icons/bi';
+import * as RiIcons  from 'react-icons/ri';
 //import Header from './Header';
 
 
@@ -15,37 +19,37 @@ export const SidebarData = [
   {
     title: 'Balance Enquiry',
     path: '/balanceenquiry',
-    icon: <AiIcons.AiFillHome />,
+    icon: <MdIcons.MdAccountBalanceWallet />,
     cName: 'nav-text'
   },
   {
     title: 'Fund Transfer',
     path: '/account',
-    icon: <IoIcons.IoIosPaper />,
+    icon: <BiIcons.BiTransfer />,
     cName: 'nav-text'
   },
   {
     title: 'Mini Statement',
-    path: '/addresses',
-    icon: <FaIcons.FaCartPlus />,
+    path: '/ministatement',
+    icon: <AiIcons.AiFillFileExcel />,
     cName: 'nav-text'
   },
   {
-    title: 'Mini Statement',
-    path: '/orders',
-    icon: <IoIcons.IoMdPeople />,
+    title: 'Customized Statement',
+    path: '/customizedstatement',
+    icon: <AiIcons.AiFillFileExcel />,
     cName: 'nav-text'
   },
   {
     title: 'Change Password',
-    path: '/login',
-    icon: <IoIcons.IoMdHelpCircle />,
+    path: '/changepassword',
+    icon: <RiIcons.RiLockPasswordFill />,
     cName: 'nav-text'
   },
   {
     title: 'Login & Logout',
-    path: '/loginn',
-    icon: <IoIcons.IoMdHelpCircle />,
+    path: '/login',
+    icon: <IoIcons5.IoLogInSharp />,
     cName: 'nav-text'
   }
 ];
