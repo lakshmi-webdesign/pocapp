@@ -6,7 +6,7 @@ function FundTransfer() {
 
     }
   return (
-    <div>
+    <div className='mt-2'>
         <h1>Fund Transfer</h1>
         <div className='row container' style={{ margin: '50px auto', backgroundColor: "rgb(26, 37, 83)", color: "white", paddingTop: '20px', paddingBottom: "20px" }}>
         <Form className='container col-md-6 ' onSubmit={handleSubmit} >
@@ -14,11 +14,11 @@ function FundTransfer() {
 
             <Form.Group className="mb-3 " controlId="formBasic">
 
-              <Form.Label >Sender's Account no:</Form.Label>
+              <Form.Label >Payers's Account no:</Form.Label>
               <Form.Control type="text" placeholder="Enter your account number" />    
 
-              <Form.Label >Receiver's Account no:</Form.Label>
-              <Form.Control type="text" placeholder="Enter Receipient's account number" /> 
+              <Form.Label >Payee's Account no:</Form.Label>
+              <Form.Control type="text" placeholder="Enter Payee's account number" /> 
 
               <Form.Label >Amount</Form.Label>
               <Form.Control type="number" placeholder="Enter Amount" /> 

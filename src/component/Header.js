@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
+import * as MdIcons from 'react-icons/md';
 import { Outlet, Link } from 'react-router-dom';
 import { SidebarData } from './Sidebar';
 import '../style/Header.css';
@@ -20,15 +21,17 @@ function Header() {
 
   return (
     <>
-      <Navbar expand="md" className="scrolled shadow p-2 mb-3 bg-white rounded" style={{ backgroundColor: 'lawngreen' }}>
+      <Navbar expand="md" className="scrolled shadow p-2 mb-1 bg-white rounded" >
         <Navbar.Brand href="/" style={{ marginLeft: '20px', color: '#1a2553', fontWeight: '900' }}>
+          <MdIcons.MdDashboard style={{width:"30px",height:"30px",verticalAlign:"bottom"}}/>
           HBOS Bank
         </Navbar.Brand>
 
         <div class="d-flex search" style={{ width: '-webkit-fill-available', marginRight: '15px' }}>
           <Form className="d-flex " style={{ width: '95.666667%', margin: 'auto' }}>
+          <button class="input-group-text" id="basic-addon1" style={{ fontWeight: 'bold' }}>⌕</button>
             <FormControl type="search" placeholder="Search for Products and Services" className="mr-sm-2" aria-label="Search"></FormControl>
-            <button class="input-group-text" id="basic-addon1" style={{ fontWeight: 'bold' }}>⌕</button>
+           
           </Form>
         </div>
 
@@ -37,7 +40,7 @@ function Header() {
         </Nav>
 
         <IconContext.Provider value={{ color: '#fff' }}>
-          <div className='navbar' style={{ marginLeft: '20px', flex: 'none', marginRight: '20px' }}>
+          <div className='navbar' style={{ marginLeft: '20px', flex: 'none', marginRight: '10px' }}>
           {/* <div class="navbar-brand name " id="name">Sign In</div> */}
             <Link to='#' className='menu-bars ' onClick={showSidebar} >
               <FaIcons.FaBars style={{ color: 'black', marginRight: '10px' ,height:"30px"}} />

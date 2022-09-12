@@ -1,12 +1,15 @@
 import React from 'react';
+import '../style/Home.css'
 import Carousel from 'react-bootstrap/Carousel';
+import Carousel1 from '../images/Carousel1.jpg';
+import Carousel2 from '../images/Carousel2.jpg';
 function Home() {
   return (
     <Carousel>
     <Carousel.Item >
-      <img
-        className="d-block w-100"
-        src="https://assets.kpmg/is/image/kpmg/hero-carousel-lanterns:cq5dam.web.1082.378"
+      <img 
+        className="d-block carousel12"
+        src={Carousel1}
         alt="First slide"
       />
       <Carousel.Caption style={{top:"30%",textAlign:"left"}}>
@@ -16,8 +19,8 @@ function Home() {
     </Carousel.Item>
     <Carousel.Item>
       <img
-        className="d-block w-100"
-        src="https://home.kpmg/content/dam/kpmg/au/images/2022/finger-controlling-touch-display-screen.jpg"
+        className="d-block carousel12"
+        src={Carousel2}
         alt="Second slide"
       />
 

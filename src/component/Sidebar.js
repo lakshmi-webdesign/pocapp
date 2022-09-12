@@ -41,13 +41,7 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Change Password',
-    path: '/changepassword',
-    icon: <RiIcons.RiLockPasswordFill />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Login & Logout',
+    title: 'Login ',
     path: '/login',
     icon: <IoIcons5.IoLogInSharp />,
     cName: 'nav-text'

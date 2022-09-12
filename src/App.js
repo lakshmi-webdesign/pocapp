@@ -15,7 +15,7 @@ import Dashboard from './component/Dashboard';
 import FundTransfer from './component/FundTransfer';
 import Ministatement from './component/Ministatement';
 import Customizedstatement from './component/Customizedstatement';
-
+import Forgotpassword from './component/Forgotpassword';
 
 function App() {
 
@@ -35,6 +35,7 @@ function App() {
           <Route path="/fundtransfer" element={<FundTransfer/>}/>
           <Route path="/ministatement" element={<Ministatement/>}/>
           <Route path="/customizedstatement" element={<Customizedstatement/>}/>
+          <Route path="/forgotpassword" element={<Forgotpassword/>}/>
           <Route path='/redirect' element={ <Navigate to="/error-page" />}/>
          </Routes>
          </Router>    

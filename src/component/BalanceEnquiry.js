@@ -36,7 +36,7 @@ function BalanceEnquiry() {
     }
   }
   return (
-    <div >
+    <div className='mt-2'>
       <h1>Balance Enquiry</h1>
       <div className='row container' style={{ margin: '50px auto', backgroundColor: "rgb(26, 37, 83)", color: "white", paddingTop: '20px', paddingBottom: "20px" }}>
 

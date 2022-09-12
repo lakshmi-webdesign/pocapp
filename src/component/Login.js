@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa';
 
 function Login() {
   const emailref = useRef(null);
@@ -65,7 +66,7 @@ function Login() {
         <div style={{ textAlign: 'initial' }}>
           <Form.Label >
             <h2>Sign In </h2>
-            <h6 style={{ marginTop: '40px' }}>Sign in to access your Orders, Offers and Wishlist.</h6>
+            <h6 style={{ marginTop: '40px' }}>Sign in to access your Account Details, Transact and much more.</h6>
           </Form.Label>
 
           <Form.Group className="mb-3 " controlId="formBasicEmail">
@@ -112,11 +113,18 @@ function Login() {
         </Button>
         <br />
         <br />
-        <a href="#forgotpassword" className='d-block' style={{ color: "white" }}>Forgot Password?</a>
+        <Link to="/forgotpassword" className='d-block' style={{ color: "white" }}>
+          Forgot Password?
+        </Link>
         <br />
 
         <Link to="/registration1" style={{ color: "white" }}>
           Don't have an account ? Sign up here
+        </Link>
+        <br /><br />
+        <Link to="/login" style={{ color: "white" }}>
+        <FaIcons.FaKey/>
+          &nbsp;&nbsp;Login with SSO
         </Link>
 
 

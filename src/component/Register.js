@@ -76,7 +76,7 @@ function Register() {
         <div style={{ textAlign: 'initial' }}>
           <Form.Label >
             <h2>Sign Up</h2>
-            <h6 style={{ textAlign: 'initial', marginTop: '40px' }}>Sign in to access your Orders, Offers and Wishlist.</h6>
+            <h6 style={{ textAlign: 'initial', marginTop: '40px' }}></h6>
           </Form.Label>
 
           <Form.Group className="mb-3 " controlId="formBasicEmail">
