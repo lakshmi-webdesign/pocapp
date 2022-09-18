@@ -27,9 +27,9 @@ function Header() {
           HBOS Bank
         </Navbar.Brand>
 
-        <div class="d-flex search" style={{ width: '-webkit-fill-available', marginRight: '15px' }}>
+        <div className="d-flex search" style={{ width: '-webkit-fill-available', marginRight: '15px' }}>
           <Form className="d-flex " style={{ width: '95.666667%', margin: 'auto' }}>
-          <button class="input-group-text" id="basic-addon1" style={{ fontWeight: 'bold' }}>⌕</button>
+          <button className="input-group-text" id="basic-addon1" style={{ fontWeight: 'bold' }}>⌕</button>
             <FormControl type="search" placeholder="Search for Products and Services" className="mr-sm-2" aria-label="Search"></FormControl>
            
           </Form>
@@ -41,7 +41,7 @@ function Header() {
 
         <IconContext.Provider value={{ color: '#fff' }}>
           <div className='navbar' style={{ marginLeft: '20px', flex: 'none', marginRight: '10px' }}>
-          {/* <div class="navbar-brand name " id="name">Sign In</div> */}
+          {/* <div className="navbar-brand name " id="name">Sign In</div> */}
             <Link to='#' className='menu-bars ' onClick={showSidebar} >
               <FaIcons.FaBars style={{ color: 'black', marginRight: '10px' ,height:"30px"}} />
             </Link>
